@@ -144,9 +144,52 @@ section {
 }
 
 
+/*TOP NAVBAR--------------------------------------------------------------------------------------*/
+
+/* Inner wrapper to control width and alignment*/
+.topbar-inner {
+  min-width: 95%;                 /* keeps the topbar 100% of the width */
+  margin: 0 auto;                  /* centers the container */
+  padding: 0.75rem 1rem;           /* breathing room inside the header */
+  display: flex;                   /* makes logo nav sit in a row */
+  align-items: center;             /* vertically aligns logo and links */
+  justify-content: space-between;  /* logo on left, nav on right */
+}
+
+/*Logo image sizing rules on top corner*/
+.logo img {
+  display: block; /* removes inline image gap */
+  height: 3rem;   /* consistent logo height */
+  width: auto;    /* keeps aspect ratio */
+
+  /*Used refrence from  https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
+  transition: height 0.2s ease; /* smooth resize when screen size changes */ 
+}
+
+/* Nav layout rules*/
+.nav {
+  display: flex;              /* links line up horizontally */
+  align-items: center;        /* aligns links vertically */
+  gap: 1rem;                /* spacing between link buttons */
+  flex-wrap: wrap;            /* if not enough space, it wraps to next line */
+  justify-content: flex-end;  /* pushes links to the right on desktop */
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;     /* keep navbar above everything */
+  background-color: white;
+}
+
+.topbar-inner{
+  position: relative;  /* fixed */
+}
+
+
 /*RESPONSIVENESS--------------------------------------------------------------*/
-
-
 /*tablet */
 @media (min-width: 48rem) {
   /* 2 columns on tablet */
