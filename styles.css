@@ -390,8 +390,8 @@ article img {
 
 /* CLOUDS */
 .layer-cloud1{ top: 9%;  left: 1%;  width: 16rem; }
-.layer-cloud3{ top: 3%; left: 23%; width: 14rem;}
-.layer-cloud2{ top: 0%; left: 50%; width: 20rem; }
+.layer-cloud3{ top: 8%; left: 23%; width: 14rem;}
+.layer-cloud2{ top: 6%; left: 50%; width: 20rem; }
 .layer-cloud4{ top: 15%;  right: 0%; width: 13rem; }
 
 
@@ -628,3 +628,144 @@ Responsiveness
   }
 }
 
+
+/* ============================= */
+/* ABOUT SLIDE DECK — CLEAN     */
+/* ============================= */
+
+.about-deck{
+  background: #eff8d8;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* Horizontal scroll container */
+.deck{
+  display: flex;
+  overflow-x: auto;                 /* mouse / trackpad scroll */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  background: #eff8d8;
+  
+  -ms-overflow-style: none;  /* IE + Edge */
+  scrollbar-width: none;     /* Firefox */
+  border-radius: 1rem;
+
+}
+
+
+
+/* Optional subtle scrollbar */
+.deck::-webkit-scrollbar{
+  height: 6px;
+  display: none;             /* Chrome, Safari */
+}
+.deck::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+/* Each slide */
+.deck-slide{
+  min-width: 100%;
+  scroll-snap-align: start;
+
+  padding: 2.5rem 1.25rem;
+  background: #eff8d8;
+
+  border: none;
+  box-shadow: none; 
+}
+
+
+/* Larger screens spacing */
+@media (min-width: 64rem){
+  .deck-slide{
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* Remove global article hover effect */
+.deck-slide:hover{
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* Content width */
+.slide-content{
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+/* Lists */
+.deck-slide ul{
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+.deck-slide li{
+  margin-bottom: 0.4rem;
+}
+
+/* Arrow navigation aligned with content */
+.slide-nav{
+  max-width: 70ch;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-spacer{
+  width: 4rem;
+}
+
+/* Buttons inside slides aligned left */
+.cta-row{
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+/* ============================= */
+/* DOTS UNDER SLIDES            */
+/* ============================= */
+
+.deck-pages{
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  background: #eff8d8;      /* same light blue */
+  padding: 1rem 0 1.25rem;  /* space around dots */
+  margin: 0;
+  border-radius: 2rem;
+
+}
+
+/* Smaller clean dots */
+.page-dot{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: rgba(0, 83, 163, 0.4);
+  border: none;
+  display: inline-block;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.page-dot:hover{
+  transform: scale(1.2);
+  background: #822C91;
+}
+
+/* Default first active */
+.page-dot:first-child{
+  background: #822C91;
+}
+
+.about-deck {
+  margin: 2rem;
+}
