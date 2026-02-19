@@ -81,7 +81,7 @@ code {
   font-size: 4rem;
   position: relative;              /* creates a positioning context */
   overflow: hidden;               /* hides layers that go outside */
-  padding-top: 7rem;              /* so content doesn't sit under navbar */
+  padding-top: 2rem;              /* so content doesn't sit under navbar */
 }
 
 
@@ -105,7 +105,7 @@ code {
 
 .lead{
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 0;
 }
 
@@ -119,9 +119,6 @@ code {
   font-weight: 800;
 }
 
-.name-program{
-  color: #FFFFFF;
-}
 
 
 
@@ -525,18 +522,12 @@ article h4{
   font-weight: 700;
 }
 
-.details-card1,
-.details-card3{
-  background-color: #34C3EF;
+.details-card{
   outline: none;
-  border-radius: 0%;
+  border-radius: 2rem;
+  background-color: white;
 }
 
-.details-card2{
-  background-color: #A6CA4E;
-  outline: none;
-  border-radius: 0%;
-}
 
 .checkout-cart{
   border: none;
@@ -871,4 +862,158 @@ Responsiveness
 
 #team h2{
   text-align: center;
+}
+
+.program-age{
+  font-weight: 700;
+  color: #822C91;   /* your brand purple */
+  margin-top: 0;
+}
+
+
+.program-title{
+  margin-bottom: 0;
+}
+
+.program-info{
+  margin: 0.5rem;
+}
+
+.programs-page{
+  background-color: #e2f1f6;  /* your light blue */
+}
+
+
+/* ============================= */
+/* PROGRAM DETAILS (details-card) */
+/* ============================= */
+
+.details-card{
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Program paragraph spacing */
+.details-card p{
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+/* Info paragraph under title */
+.program-info{
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Meta lines: Age + Ratio */
+.program-meta{
+  margin: 0.35rem 0;
+}
+
+.program-meta strong{
+  color: #0053A3;   /* dark blue */
+  font-weight: 800;
+}
+
+.meta-note{
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: rgba(0,0,0,0.75);
+  font-size: 0.95rem;
+}
+
+/* Daily Program heading */
+.daily-title{
+  margin: 1.1rem 0 0.5rem;
+  color: #0053A3;         /* uses your h4 style but match blue */
+}
+
+/* Daily list styling */
+.daily-list{
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+/* Make list items feel “clean” */
+.daily-list li{
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Optional: register button spacing */
+.details-card .button{
+  margin-top: 0.75rem;
+}
+
+
+/* ============================= */
+/* EVENTS & UPDATES              */
+/* ============================= */
+
+#updates{
+  position: relative;
+  z-index: 10; /* stays above parallax layers */
+}
+
+.updates-section{
+  background: #eff8d8; /* light blue like your theme */
+  border: 0;
+}
+
+.updates-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.update-card{
+  background: #FFFFFF;
+  border: 0.12rem solid rgba(0, 83, 163, 0.18);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0.35rem 1rem rgba(0,0,0,0.06);
+}
+
+/* small month tag */
+.update-month{
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+  color: #822C91; /* purple */
+  font-family: "Nunito", sans-serif;
+}
+
+/* keep h3 spacing tight */
+.update-title{
+  margin: 0 0 0.5rem;
+}
+
+.update-text{
+  margin: 0 0 0.9rem;
+  line-height: 1.6;
+}
+
+.update-actions{
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Tablet = 2 columns */
+@media (min-width: 48rem){
+  .updates-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop = 3 columns */
+@media (min-width: 64rem){
+  .updates-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
